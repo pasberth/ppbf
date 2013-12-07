@@ -1,10 +1,10 @@
-#if PPBF_SOURCE_LENGTH != BOOST_PP_SLOT(2) && __INCLUDE_LEVEL__ < 128 // start eval
+#if PPBF_SOURCE_LENGTH != BOOST_PP_SLOT(2) && __INCLUDE_LEVEL__ < 128
 #
 #define PPBF_EVAL BOOST_PP_SEQ_ELEM(BOOST_PP_SLOT(2), PPBF_SOURCE)
 #
 #if PPBF_EVAL == 1  // ip
 #
-#if BOOST_PP_SLOT(1) < 5 // start operator eval
+#if BOOST_PP_SLOT(1) < 5  // start operator eval
 #define BOOST_PP_VALUE BOOST_PP_SLOT(1) + 1
 #include BOOST_PP_ASSIGN_SLOT(1)
 #endif
@@ -44,13 +44,13 @@ BOOST_PP_CAT(PPBF_ASCII_, BOOST_PP_SLOT(BOOST_PP_SLOT(1)))
 #
 #endif
 #
-#endif // end operator eval
+#endif  // end operator eval
 #
 #undef PPBF_EVAL
 #
-#define BOOST_PP_VALUE BOOST_PP_SLOT(2) + 1 
+#define BOOST_PP_VALUE BOOST_PP_SLOT(2) + 1
 #include BOOST_PP_ASSIGN_SLOT(2)
 #
 #include __FILE__
 #
-#endif  // end eval
+#endif
