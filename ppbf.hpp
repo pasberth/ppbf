@@ -43,9 +43,7 @@
 #
 #endif  // ifndef PPBF_INITIALIZE
 #
-#if PPBF_SOURCE_LENGTH == BOOST_PP_SLOT(2)  // start eval
-#                                           // finish
-#else
+#if PPBF_SOURCE_LENGTH != BOOST_PP_SLOT(2)  // start eval
 #
 #define PPBF_EVAL BOOST_PP_SEQ_ELEM(BOOST_PP_SLOT(2), PPBF_SOURCE)
 #
