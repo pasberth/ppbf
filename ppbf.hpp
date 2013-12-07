@@ -16,6 +16,8 @@
 #define iv (3)
 #define dv (4)
 #define sh (5)
+#define la (6)
+#define gt (7)
 #
 #endif  // ifndef PPBF_OPERATOR
 #
@@ -43,45 +45,36 @@
 #
 #endif  // ifndef PPBF_INITIALIZE
 #
-#if PPBF_SOURCE_LENGTH != BOOST_PP_SLOT(2)  // start eval
+#define PPBF_EVAL_SHIFT() 32
+#include "ppbf_eval.hpp"
+#undef PPBF_EVAL_SHIFT
 #
-#define PPBF_EVAL BOOST_PP_SEQ_ELEM(BOOST_PP_SLOT(2), PPBF_SOURCE)
+#define PPBF_EVAL_SHIFT() 64
+#include "ppbf_eval.hpp"
+#undef PPBF_EVAL_SHIFT
 #
-#if PPBF_EVAL == 1  // ip
+#define PPBF_EVAL_SHIFT() 96
+#include "ppbf_eval.hpp"
+#undef PPBF_EVAL_SHIFT
 #
-#if BOOST_PP_SLOT(1) < 5 // start operator eval
-#define BOOST_PP_VALUE BOOST_PP_SLOT(1) + 1
-#include BOOST_PP_ASSIGN_SLOT(1)
-#endif
+#define PPBF_EVAL_SHIFT() 128
+#include "ppbf_eval.hpp"
+#undef PPBF_EVAL_SHIFT
 #
-#elif PPBF_EVAL == 2  // dp
+#define PPBF_EVAL_SHIFT() 160
+#include "ppbf_eval.hpp"
+#undef PPBF_EVAL_SHIFT
 #
-#if BOOST_PP_SLOT(1) > 3
-#define BOOST_PP_VALUE BOOST_PP_SLOT(1) - 1
-#include BOOST_PP_ASSIGN_SLOT(1)
-#endif
+#define PPBF_EVAL_SHIFT() 192
+#include "ppbf_eval.hpp"
+#undef PPBF_EVAL_SHIFT
 #
-#elif PPBF_EVAL == 3  // iv
+#define PPBF_EVAL_SHIFT() 224
+#include "ppbf_eval.hpp"
+#undef PPBF_EVAL_SHIFT
 #
-#define BOOST_PP_VALUE BOOST_PP_SLOT(BOOST_PP_SLOT(1)) + 1
-#include BOOST_PP_ASSIGN_SLOT(BOOST_PP_SLOT(1))
+#define PPBF_EVAL_SHIFT() 256
+#include "ppbf_eval.hpp"
+#undef PPBF_EVAL_SHIFT
 #
-#elif PPBF_EVAL == 4  // dp
-#
-#define BOOST_PP_VALUE BOOST_PP_SLOT(BOOST_PP_SLOT(1)) - 1
-#include BOOST_PP_ASSIGN_SLOT(BOOST_PP_SLOT(1))
-#
-#elif PPBF_EVAL == 5
-#
-BOOST_PP_CAT(PPBF_ASCII_, BOOST_PP_SLOT(BOOST_PP_SLOT(1)))
-#
-#endif // end operator eval
-#
-#undef PPBF_EVAL
-#
-#define BOOST_PP_VALUE BOOST_PP_SLOT(2) + 1
-#include BOOST_PP_ASSIGN_SLOT(2)
-#
-#include __FILE__
-#
-#endif  // end eval
+#// End
