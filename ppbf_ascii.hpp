@@ -60,7 +60,7 @@
 //
 #define PPBF_ASCII_93 ]
 #define PPBF_ASCII_94 ^
-#define PPBF_ASCII_95_
+#define PPBF_ASCII_95 _
 #define PPBF_ASCII_96 `
 #define PPBF_ASCII_97 a
 #define PPBF_ASCII_98 b
