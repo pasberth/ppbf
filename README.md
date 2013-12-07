@@ -3,7 +3,7 @@ ppbfはbrainfuckの言語仕様を簡略化した、Cプリプロセッサ上で
 brainfuckの記述経験があれば、若干異なるものの容易に理解出来る仕様である
 
 #ソースコードの記述  
-実行コードはppbf_source.hpp内のPPBF_SOURCEに1命令ずつスペースで区切って記述する
+実行コードはppbf_source.hpp内のPPBF_SOURCEに1命令ずつ半角スペースで区切って記述する
 
 #仕様
 それぞれ値が0で初期化された3つのポインタからなり、はじめは1つ目のポインタを指している  
@@ -37,6 +37,10 @@ ip iv iv iv iv iv dp la iv ip dv dp gt
 #実行  
 clang -E -P -w ppbf.hpp | tr -d '\n' または gcc -E -P -w ppbf.hpp | tr -d '\n'   
 プリプロセッサでソースコードを解釈し、tr -d '\n'で余計な改行を除去してやる
+
+#その他  
+実行時に表示されるのはshで出力した値のASCIIコード文字である、ただしppbf_ascii.hpp内に定義されていないもの(制御文字等)は扱えない  
+また、プリプロセッサの仕様として半角スペースは無視される為に使えない  
 
 #実行例  
 ![screen shot](screenshot.png)  
