@@ -45,36 +45,38 @@
 #
 #endif  // ifndef PPBF_INITIALIZE
 #
-#define PPBF_EVAL_SHIFT() 32
+# // Evaluation capacity : 32 * 127 operators
 #include "ppbf_eval.hpp"
-#undef PPBF_EVAL_SHIFT
-#
-#define PPBF_EVAL_SHIFT() 64
 #include "ppbf_eval.hpp"
-#undef PPBF_EVAL_SHIFT
-#
-#define PPBF_EVAL_SHIFT() 96
 #include "ppbf_eval.hpp"
-#undef PPBF_EVAL_SHIFT
-#
-#define PPBF_EVAL_SHIFT() 128
 #include "ppbf_eval.hpp"
-#undef PPBF_EVAL_SHIFT
-#
-#define PPBF_EVAL_SHIFT() 160
 #include "ppbf_eval.hpp"
-#undef PPBF_EVAL_SHIFT
-#
-#define PPBF_EVAL_SHIFT() 192
 #include "ppbf_eval.hpp"
-#undef PPBF_EVAL_SHIFT
-#
-#define PPBF_EVAL_SHIFT() 224
 #include "ppbf_eval.hpp"
-#undef PPBF_EVAL_SHIFT
-#
-#define PPBF_EVAL_SHIFT() 256
 #include "ppbf_eval.hpp"
-#undef PPBF_EVAL_SHIFT
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
+#include "ppbf_eval.hpp"
 #
 #// End
