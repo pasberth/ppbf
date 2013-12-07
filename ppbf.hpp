@@ -49,7 +49,7 @@
 #
 #if PPBF_EVAL == 1  // ip
 #
-#if BOOST_PP_SLOT(1) < 5
+#if BOOST_PP_SLOT(1) < 5 // start operator eval
 #define BOOST_PP_VALUE BOOST_PP_SLOT(1) + 1
 #include BOOST_PP_ASSIGN_SLOT(1)
 #endif
@@ -72,8 +72,10 @@
 #include BOOST_PP_ASSIGN_SLOT(BOOST_PP_SLOT(1))
 #
 #elif PPBF_EVAL == 5
+#
 BOOST_PP_CAT(PPBF_ASCII_, BOOST_PP_SLOT(BOOST_PP_SLOT(1)))
-#endif
+#
+#endif // end operator eval
 #
 #undef PPBF_EVAL
 #
