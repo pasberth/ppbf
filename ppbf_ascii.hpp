@@ -1,0 +1,26 @@
+#define PPBF_ASCII_32   
+#define PPBF_ASCII_97 a
+#define PPBF_ASCII_98 b
+#define PPBF_ASCII_99 c
+#define PPBF_ASCII_100 d
+#define PPBF_ASCII_101 e
+#define PPBF_ASCII_102 f
+#define PPBF_ASCII_103 g
+#define PPBF_ASCII_104 h
+#define PPBF_ASCII_105 i
+#define PPBF_ASCII_106 j
+#define PPBF_ASCII_107 k
+#define PPBF_ASCII_108 l
+#define PPBF_ASCII_109 m
+#define PPBF_ASCII_110 n
+#define PPBF_ASCII_111 o
+#define PPBF_ASCII_112 p
+#define PPBF_ASCII_113 q
+#define PPBF_ASCII_114 r
+#define PPBF_ASCII_115 s
+#define PPBF_ASCII_116 t
+#define PPBF_ASCII_117 u
+#define PPBF_ASCII_118 w
+#define PPBF_ASCII_119 x
+#define PPBF_ASCII_120 y
+#define PPBF_ASCII_121 z
