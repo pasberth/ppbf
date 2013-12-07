@@ -11,3 +11,6 @@ sh - ポインタの指す値を表示する
 #実行  
 clang -E -P ppbf.hpp | tr -d '\n' または gcc -E -P ppbf.hpp | tr -d '\n'   
 プリプロセッサで解釈し、tr -d '\n'で余計な改行の除去してやる
+
+#実行例  
+![screen shot](screenshot.png)  
